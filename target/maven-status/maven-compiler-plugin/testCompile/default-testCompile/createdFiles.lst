@@ -1,0 +1,6 @@
+base\BaseApiTest.class
+sample\SampleTest.class
+sample\SmokeNg.class
+database\DatabaseSmokeTest.class
+ui\HomePageTest.class
+api\ApiEndpointTest.class

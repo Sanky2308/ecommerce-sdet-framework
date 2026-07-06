@@ -1,0 +1,4 @@
+config\ConfigManager.class
+models\User.class
+api\ApiEndpoints.class
+pages\HomePage.class
