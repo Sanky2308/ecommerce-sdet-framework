@@ -4,6 +4,7 @@
         <classes>
             <class name="sample.SmokeNg" />
             <class name="ui.HomePageTest" />
+            <class name="ui.HomePageUiTest" />
             <class name="api.ApiEndpointTest" />
             <class name="database.DatabaseSmokeTest" />
         </classes>

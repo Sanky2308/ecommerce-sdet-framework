@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-05T22:32:03 EDT" name="E-Commerce SDET Full Suite" finished-at="2026-07-05T22:32:03 EDT" duration-ms="59">
+  <suite started-at="2026-07-05T23:14:35 EDT" name="E-Commerce SDET Full Suite" finished-at="2026-07-05T23:15:24 EDT" duration-ms="48794">
     <groups>
     </groups>
-    <test started-at="2026-07-05T22:32:03 EDT" name="Smoke Layer Tests" finished-at="2026-07-05T22:32:03 EDT" duration-ms="59">
+    <test started-at="2026-07-05T23:14:35 EDT" name="Smoke Layer Tests" finished-at="2026-07-05T23:15:24 EDT" duration-ms="48794">
       <class name="database.DatabaseSmokeTest">
-        <test-method signature="databaseLayerPlaceholderShouldRun()[pri:0, instance:database.DatabaseSmokeTest@659a969b]" started-at="2026-07-05T22:32:03 EDT" name="databaseLayerPlaceholderShouldRun" finished-at="2026-07-05T22:32:03 EDT" duration-ms="0" status="PASS">
+        <test-method signature="databaseLayerPlaceholderShouldRun()[pri:0, instance:database.DatabaseSmokeTest@4a22f9e2]" started-at="2026-07-05T23:15:24 EDT" name="databaseLayerPlaceholderShouldRun" finished-at="2026-07-05T23:15:24 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- databaseLayerPlaceholderShouldRun -->
       </class> <!-- database.DatabaseSmokeTest -->
+      <class name="ui.HomePageUiTest">
+        <test-method signature="userShouldOpenHomePage()[pri:0, instance:ui.HomePageUiTest@3d680b5a]" started-at="2026-07-05T23:14:36 EDT" name="userShouldOpenHomePage" finished-at="2026-07-05T23:15:24 EDT" duration-ms="48718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userShouldOpenHomePage -->
+      </class> <!-- ui.HomePageUiTest -->
       <class name="api.ApiEndpointTest">
-        <test-method signature="productListEndpointShouldBeDefined()[pri:0, instance:api.ApiEndpointTest@1d119efb]" started-at="2026-07-05T22:32:03 EDT" name="productListEndpointShouldBeDefined" finished-at="2026-07-05T22:32:03 EDT" duration-ms="1" status="PASS">
+        <test-method signature="productListEndpointShouldBeDefined()[pri:0, instance:api.ApiEndpointTest@4b5d6a01]" started-at="2026-07-05T23:15:24 EDT" name="productListEndpointShouldBeDefined" finished-at="2026-07-05T23:15:24 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productListEndpointShouldBeDefined -->
       </class> <!-- api.ApiEndpointTest -->
       <class name="sample.SmokeNg">
-        <test-method signature="shouldRun()[pri:0, instance:sample.SmokeNg@6ef888f6]" started-at="2026-07-05T22:32:03 EDT" name="shouldRun" finished-at="2026-07-05T22:32:03 EDT" duration-ms="6" status="PASS">
+        <test-method signature="shouldRun()[pri:0, instance:sample.SmokeNg@49b0b76]" started-at="2026-07-05T23:14:36 EDT" name="shouldRun" finished-at="2026-07-05T23:14:36 EDT" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldRun -->
       </class> <!-- sample.SmokeNg -->
       <class name="ui.HomePageTest">
-        <test-method signature="applicationUrlShouldBeConfigured()[pri:0, instance:ui.HomePageTest@6fe7aac8]" started-at="2026-07-05T22:32:03 EDT" name="applicationUrlShouldBeConfigured" finished-at="2026-07-05T22:32:03 EDT" duration-ms="3" status="PASS">
+        <test-method signature="applicationUrlShouldBeConfigured()[pri:0, instance:ui.HomePageTest@48e4374]" started-at="2026-07-05T23:14:36 EDT" name="applicationUrlShouldBeConfigured" finished-at="2026-07-05T23:14:36 EDT" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applicationUrlShouldBeConfigured -->
