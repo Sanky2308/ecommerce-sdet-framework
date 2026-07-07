@@ -1,3 +1,4 @@
+api\ProductApiTest.class
 base\BaseApiTest.class
 sample\SampleTest.class
 sample\SmokeNg.class

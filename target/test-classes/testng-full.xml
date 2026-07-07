@@ -6,6 +6,7 @@
             <class name="ui.HomePageTest" />
             <class name="ui.HomePageUiTest" />
             <class name="api.ApiEndpointTest" />
+            <class name="api.ProductApiTest" />
             <class name="database.DatabaseSmokeTest" />
         </classes>
     </test>
