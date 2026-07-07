@@ -1,0 +1,7 @@
+target/
+.git/
+.idea/
+*.iml
+allure-results/
+allure-report/
+docs/screenshots/
