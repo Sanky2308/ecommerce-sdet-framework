@@ -1,161 +1,112 @@
 # E-Commerce SDET Automation Framework
 
-Enterprise-style QA automation framework for an e-commerce application using **Java, Playwright, TestNG, REST Assured, JDBC, GitHub Actions, Docker, and Allure Reports**.
+A Java-based QA automation framework built to demonstrate UI automation, API testing, reporting, CI execution, and Docker-based test execution for an e-commerce application.
 
-This project is designed as a portfolio-grade SDET framework demonstrating UI automation, API testing, database validation, reporting, CI/CD execution, Dockerized runs, and maintainable framework architecture.
+This project is designed as a professional SDET portfolio project and showcases practical automation skills used in real QA teams.
 
-## Project Purpose
-
-The goal of this framework is to simulate how a professional QA/SDET automation project is structured in a real delivery environment.
-
-It focuses on:
-
-- automating critical e-commerce user journeys
-- validating backend APIs
-- supporting database-level checks
-- generating readable test reports
-- enabling CI/CD execution
-- supporting Docker-based test runs
-- keeping the framework maintainable and scalable
+---
 
 ## Tech Stack
 
-| Area | Tool / Library |
+| Area | Tool |
 |---|---|
-| Language | Java |
-| UI Automation | Playwright |
-| Test Runner | TestNG |
-| API Testing | REST Assured |
-| Database Testing | JDBC |
-| Reporting | Allure Reports |
+| Language | Java 17 |
 | Build Tool | Maven |
+| Test Runner | TestNG |
+| UI Automation | Playwright |
+| API Testing | REST Assured |
+| Reporting | Allure Reports |
 | CI/CD | GitHub Actions |
-| Containerization | Docker / Docker Compose |
-| Test Data | JSON, POJO, DataProvider |
-| Design Pattern | Page Object Model |
+| Containerization | Docker |
+| Configuration | Properties File |
 
-## Framework Architecture
+---
 
-```text
-                  TestNG
-                    |
-        +-----------+-----------+
-        |           |           |
-       UI          API      Database
-        |           |           |
-    Playwright  REST Assured   JDBC
-        |           |           |
-        +-----------+-----------+
-             Base Framework
-                    |
-        Configuration / Utilities
-                    |
-        Allure / Logging / Docker
-```
+## What This Framework Covers
 
-## Expected Project Structure
-
-```text
-src
-├── main
-│   ├── java
-│   │   ├── config
-│   │   ├── pages
-│   │   ├── api
-│   │   ├── database
-│   │   ├── models
-│   │   └── utils
-│   └── resources
-│       └── config.properties
-│
-├── test
-│   ├── java
-│   │   ├── base
-│   │   ├── ui
-│   │   ├── api
-│   │   ├── e2e
-│   │   └── database
-│   └── resources
-│       ├── testng.xml
-│       └── test-data
-│
-docker
-├── Dockerfile
-└── docker-compose.yml
-
-.github
-└── workflows
-    └── ci.yml
-
-docs
-└── screenshots
-```
-
-## Key Features
-
-- Page Object Model for maintainable UI automation
-- Playwright-based browser automation
-- REST Assured API test layer
-- JDBC database validation support
-- Data-driven testing using JSON and POJOs
-- TestNG suite execution
-- Parallel execution support using ThreadLocal design
-- Screenshot capture on failure
-- Playwright trace support for failed UI tests
+- UI smoke testing using Playwright
+- API smoke testing using REST Assured
+- Test execution using TestNG
+- Configuration management using `config.properties`
 - Allure reporting integration
-- GitHub Actions CI execution
-- Docker and Docker Compose execution support
-- Environment-based configuration
+- GitHub Actions CI pipeline
+- Docker-based test execution
+- Portfolio screenshots for execution proof
+
+---
+
+## Project Structure
+
+```text
+ecommerce-sdet-framework
+├── .github
+│   └── workflows
+│       └── ci.yml
+├── docs
+│   └── screenshots
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   ├── api
+│   │   │   ├── config
+│   │   │   ├── models
+│   │   │   └── pages
+│   │   └── resources
+│   │       └── config.properties
+│   └── test
+│       ├── java
+│       │   ├── api
+│       │   ├── database
+│       │   ├── sample
+│       │   └── ui
+│       └── resources
+│           └── testng-full.xml
+├── Dockerfile
+├── .dockerignore
+├── pom.xml
+└── README.md
+```
+
+---
+
+## Framework Flow
+
+```text
+TestNG Suite
+    |
+    +-- UI Tests      -> Playwright
+    |
+    +-- API Tests     -> REST Assured
+    |
+    +-- Smoke Checks  -> Framework sanity validation
+    |
+    +-- Reporting     -> Allure Results
+    |
+    +-- CI Execution  -> GitHub Actions
+    |
+    +-- Docker Run    -> Containerized Maven execution
+```
+
+---
 
 ## Test Coverage
 
-### UI Automation
+### UI Test
 
-Core e-commerce user flows:
+The Playwright UI smoke test launches Chromium in headless mode, opens the configured application URL, reads the page title, and verifies that the application loads successfully.
 
-- login
-- registration
-- logout
-- product search
-- add to cart
-- checkout smoke flow
-- validation of error messages
+### API Test
 
-### API Testing
+The REST Assured API smoke test calls the product list endpoint and validates:
 
-Backend validation scenarios:
+- HTTP status code
+- Response body content
 
-- create user
-- verify login
-- update user
-- delete user
-- negative API validation
-- response status and message validation
+### Framework Smoke Tests
 
-### End-to-End Testing
+The project includes lightweight smoke tests to verify that the framework layers execute correctly through TestNG.
 
-Example E2E flow:
-
-```text
-Create user using API
-        |
-Login using UI
-        |
-Validate user session
-        |
-Delete user using API
-        |
-Verify deleted user cannot log in
-```
-
-### Database Testing
-
-Database validation can include:
-
-- user record validation
-- order/cart record validation
-- data consistency checks
-- cleanup verification
+---
 
 ## How to Run Tests Locally
 
@@ -163,19 +114,15 @@ Database validation can include:
 mvn clean test
 ```
 
-## Run TestNG Suite
+Expected result:
 
-```bash
-mvn clean test -DsuiteXmlFile=src/test/resources/testng.xml
+```text
+BUILD SUCCESS
 ```
 
-## Run Allure Report
+---
 
-```bash
-allure serve allure-results
-```
-
-## Docker Execution
+## How to Run Tests with Docker
 
 Build the Docker image:
 
@@ -183,69 +130,90 @@ Build the Docker image:
 docker build -t ecommerce-sdet-framework .
 ```
 
-Run tests inside Docker:
+Run the test suite inside Docker:
 
 ```bash
-docker run ecommerce-sdet-framework
+docker run --rm ecommerce-sdet-framework
 ```
 
-Run with Docker Compose:
+Expected result:
+
+```text
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+BUILD SUCCESS
+```
+
+---
+
+## Allure Reporting
+
+Run the tests:
 
 ```bash
-docker-compose up --build
+mvn clean test
 ```
 
-## GitHub Actions CI/CD
+Serve the Allure report:
 
-This framework is intended to support automated execution on:
+```bash
+allure serve target/allure-results
+```
 
-- pull requests
-- pushes to the main branch
-- scheduled nightly regression runs
+---
 
-CI should execute the Maven test suite and publish test results or report artifacts.
+## GitHub Actions CI
 
-## Reporting Screenshots
+The framework includes a GitHub Actions workflow that runs automatically on:
 
-Add portfolio screenshots under:
+- Push to `main`
+- Pull request to `main`
+- Manual workflow trigger
+
+The workflow performs:
+
+- Repository checkout
+- Java setup
+- Playwright Chromium installation
+- Maven test execution
+- Allure results upload
+- Surefire reports upload
+
+Workflow file:
 
 ```text
-docs/screenshots/
-├── allure-report.png
-├── github-actions.png
-├── docker-run.png
-└── test-execution.png
+.github/workflows/ci.yml
 ```
 
-Then reference them in this README:
+---
 
-```markdown
-![Allure Report](docs/screenshots/allure-report.png)
-![GitHub Actions](docs/screenshots/github-actions.png)
-![Docker Execution](docs/screenshots/docker-run.png)
-```
+## Screenshots
 
-## Why This Framework Matters
-
-This project demonstrates practical QA automation skills expected from modern QA/SDET engineers:
-
-- framework design
-- UI automation
-- API automation
-- database validation
-- CI/CD integration
-- containerized execution
-- reporting and debugging
-- scalable test structure
-
-It is built to show not only that tests can be automated, but that the automation can be organized like a maintainable engineering project, which is apparently still rare enough to impress people.
-
-## Related Freelance Service Kit
-
-The client-facing service package for this framework is maintained separately in:
+Execution proof screenshots are stored under:
 
 ```text
-qa-automation-freelance-starter
+docs/screenshots
 ```
 
-That repo contains service packages, outreach templates, proposal copy, and a lead tracker for turning this technical portfolio into paid QA automation work.
+Current proof screenshots include:
+
+- Local test execution
+- Docker execution
+
+Recommended additional screenshots:
+
+- Allure report dashboard
+- GitHub Actions successful run
+
+---
+
+## Why This Project Matters
+
+This project demonstrates practical QA automation skills across UI testing, API testing, reporting, CI/CD, and containerized execution.
+
+It is suitable for showcasing SDET and QA Automation skills in resumes, LinkedIn profiles, GitHub portfolios, and freelance client proposals.
+
+---
+
+## Author
+
+Sanket Lamba
