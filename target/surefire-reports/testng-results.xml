@@ -2,42 +2,42 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-06T21:59:45 EDT" name="E-Commerce SDET Full Suite" finished-at="2026-07-06T22:00:53 EDT" duration-ms="67796">
+  <suite started-at="2026-07-06T22:04:24 EDT" name="E-Commerce SDET Full Suite" finished-at="2026-07-06T22:04:42 EDT" duration-ms="18366">
     <groups>
     </groups>
-    <test started-at="2026-07-06T21:59:45 EDT" name="Smoke Layer Tests" finished-at="2026-07-06T22:00:53 EDT" duration-ms="67796">
+    <test started-at="2026-07-06T22:04:24 EDT" name="Smoke Layer Tests" finished-at="2026-07-06T22:04:42 EDT" duration-ms="18366">
       <class name="database.DatabaseSmokeTest">
-        <test-method signature="databaseLayerPlaceholderShouldRun()[pri:0, instance:database.DatabaseSmokeTest@e056f20]" started-at="2026-07-06T22:00:53 EDT" name="databaseLayerPlaceholderShouldRun" finished-at="2026-07-06T22:00:53 EDT" duration-ms="0" status="PASS">
+        <test-method signature="databaseLayerPlaceholderShouldRun()[pri:0, instance:database.DatabaseSmokeTest@5ab956d7]" started-at="2026-07-06T22:04:42 EDT" name="databaseLayerPlaceholderShouldRun" finished-at="2026-07-06T22:04:42 EDT" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- databaseLayerPlaceholderShouldRun -->
       </class> <!-- database.DatabaseSmokeTest -->
       <class name="api.ProductApiTest">
-        <test-method signature="userShouldGetProductsList()[pri:0, instance:api.ProductApiTest@34b7ac2f]" started-at="2026-07-06T22:00:49 EDT" name="userShouldGetProductsList" finished-at="2026-07-06T22:00:53 EDT" duration-ms="3348" status="PASS">
+        <test-method signature="userShouldGetProductsList()[pri:0, instance:api.ProductApiTest@2892d68]" started-at="2026-07-06T22:04:38 EDT" name="userShouldGetProductsList" finished-at="2026-07-06T22:04:42 EDT" duration-ms="3393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userShouldGetProductsList -->
       </class> <!-- api.ProductApiTest -->
       <class name="ui.HomePageUiTest">
-        <test-method signature="userShouldOpenHomePage()[pri:0, instance:ui.HomePageUiTest@5a63f509]" started-at="2026-07-06T21:59:45 EDT" name="userShouldOpenHomePage" finished-at="2026-07-06T22:00:49 EDT" duration-ms="64362" status="PASS">
+        <test-method signature="userShouldOpenHomePage()[pri:0, instance:ui.HomePageUiTest@4145bad8]" started-at="2026-07-06T22:04:24 EDT" name="userShouldOpenHomePage" finished-at="2026-07-06T22:04:38 EDT" duration-ms="14725" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userShouldOpenHomePage -->
       </class> <!-- ui.HomePageUiTest -->
       <class name="api.ApiEndpointTest">
-        <test-method signature="productListEndpointShouldBeDefined()[pri:0, instance:api.ApiEndpointTest@6e4784bc]" started-at="2026-07-06T22:00:49 EDT" name="productListEndpointShouldBeDefined" finished-at="2026-07-06T22:00:49 EDT" duration-ms="0" status="PASS">
+        <test-method signature="productListEndpointShouldBeDefined()[pri:0, instance:api.ApiEndpointTest@d86a6f]" started-at="2026-07-06T22:04:38 EDT" name="productListEndpointShouldBeDefined" finished-at="2026-07-06T22:04:38 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productListEndpointShouldBeDefined -->
       </class> <!-- api.ApiEndpointTest -->
       <class name="sample.SmokeNg">
-        <test-method signature="shouldRun()[pri:0, instance:sample.SmokeNg@3e92efc3]" started-at="2026-07-06T21:59:45 EDT" name="shouldRun" finished-at="2026-07-06T21:59:45 EDT" duration-ms="6" status="PASS">
+        <test-method signature="shouldRun()[pri:0, instance:sample.SmokeNg@368247b9]" started-at="2026-07-06T22:04:24 EDT" name="shouldRun" finished-at="2026-07-06T22:04:24 EDT" duration-ms="72" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldRun -->
       </class> <!-- sample.SmokeNg -->
       <class name="ui.HomePageTest">
-        <test-method signature="applicationUrlShouldBeConfigured()[pri:0, instance:ui.HomePageTest@29626d54]" started-at="2026-07-06T21:59:45 EDT" name="applicationUrlShouldBeConfigured" finished-at="2026-07-06T21:59:45 EDT" duration-ms="3" status="PASS">
+        <test-method signature="applicationUrlShouldBeConfigured()[pri:0, instance:ui.HomePageTest@63376bed]" started-at="2026-07-06T22:04:24 EDT" name="applicationUrlShouldBeConfigured" finished-at="2026-07-06T22:04:24 EDT" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applicationUrlShouldBeConfigured -->
